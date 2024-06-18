@@ -1,0 +1,2 @@
+https://keras.io/examples/vision/xray_classification_with_tpus/
+Build an X-Ray image classification model to predict whether an X-ray scan shows presence of pneumonia
