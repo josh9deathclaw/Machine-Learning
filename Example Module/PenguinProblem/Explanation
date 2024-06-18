@@ -5,3 +5,47 @@ Problem : Categorise Penguins by Species
 
 Classify Penguins using their body weight, flipper length and beaks, and the length and width of their culmen.
   - Chinstrap, Gentoo and Adelie Penguins
+
+Setup : 
+    - Install tfds-nightly for dataset
+    - download dataset using tfds.load method
+    - 1st 6 rows are features and last column is the label, value want to predict
+            - for this dataset, either 0,1 or 2 (corresponds to the penguins names)
+    - Create list of species names
+    - reduce the dataset to only 4 features for efficiency
+Build Linear Model
+    - Define the relationship between the body mass, flipper and culmen measurements with the predicted penguin species
+    - Good Machine Learning Approach Determines the Model for you
+    - Feed enough examples into the right model type and it will learn the relationships for you
+Select the Model
+    - Nearal Network is Used
+        - Find Complex Relationships between features and the label
+        - Highly-structured graph, organised into one or more hidden layers
+        - Each hidden layer consists of one or more neaurons
+            - Fully Connected Neural Network (there are other types)
+                - The neurons in one layer recieve input connections from every neuron in the previous layer
+        - Training the Model
+                - Yields 3 Predictions
+                    1. Likelihood (inference)
+                    2. ??
+Create Model Using Keras
+    - tf.keras.Sequential = linear stack of layers
+        - constructor : takes a list of layer instances, 2 here, with 10 nodes each 
+            - and an output layer, with 3 nodes for the label predictions
+                            - 1st layers input_shape parameter corresponds to the number of features from the dataset
+    - use ReLU for activation function (non-linearities)
+    - Ideal Layers and Neurons depends on the problem and dataset
+Using the Model
+    - Test on a small batch of feeatures (5)
+    - Each returns a logit for each class, convert logits into a probability using the 'softmax' function
+    - Use tf.math.argmax : will give the predicted class index
+        - Currently the predictions are very poor due to the model being untrained
+Train the Model
+    - Optimise the model over time, it will learn the dataset
+    - Train the model until it can look at unseen data and make predictions
+            - Learning to much will lead to it only working for that dataset and not generally
+                    - Called overfitting
+    - Example of Supervised Machine Learning (trained from examples that contain labels)
+    - In unsupervised machine learning, they dont include abels, but find patterns among the features instead
+Define the Loss and Gradient Function
+    -
