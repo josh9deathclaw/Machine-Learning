@@ -1,0 +1,7 @@
+https://www.tensorflow.org/tutorials/customization/custom_training_walkthrough
+Tutorial : Train a Machine Learning Model with a custom training loop 
+Problem : Categorise Penguins by Species
+    - Import a Dataset, Linear Model, Train Model, Evaluate effectiveness, Make Predicitions
+
+Classify Penguins using their body weight, flipper length and beaks, and the length and width of their culmen.
+  - Chinstrap, Gentoo and Adelie Penguins
