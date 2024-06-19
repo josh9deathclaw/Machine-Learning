@@ -1,2 +1,35 @@
 https://keras.io/examples/vision/xray_classification_with_tpus/
 Build an X-Ray image classification model to predict whether an X-ray scan shows presence of pneumonia
+Setup : import re, os, random, numpy, pandas, tensorflow, matplotlib
+Uses TPU (Tensor Processing Unit)
+  - AI Accelerator Circuit developed by google
+  - High volume low precision computation
+Load Data using TPU, through Google Cloud Link
+  - Puts images separately into training and testing 
+  - Count the healthy vs pneumonia x-rays
+        - Major inbalance in healthy vs pneumonia, this can be corrected later on
+  - Map each filename to corresponding pair (image, label)
+        - 0 = normal, 1 = pneumonia
+  - Convert path, string, load raw data from file as a string
+  - Split Data into training and validation datasets
+  - Load and format the test data
+      - from different source
+Visualise the Dataset
+    - Buffered Prefetching ?
+          - yield data from disk without I/O blocking
+Build CNN Moddel
+  - Create Convolution and Dense Layer Block 
+        - better for modulation and makes it easier to understand
+  - Make Constructor for the Model
+Introduce Balancing
+Train the Model
+  - define callbacks, these are used as checkpoints to save the best weights of the model
+      - this means when we use the model again it does not need to be retrained
+  - early stopping is used to stop the training when model becomes stagnant or overfitting
+  - implements learning rate
+Fit the Model
+  - Accuracy : what fractions of the labels is correct
+  - Precision : the fraction of labeled positives that are correct
+Visualise Model Performance
+  - plots precision, loss, recall and accuracy
+Predict and Evaluate the Results using the Test Data
