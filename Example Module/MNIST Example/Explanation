@@ -1,6 +1,7 @@
 https://blog.keras.io/keras-as-a-simplified-interface-to-tensorflow-tutorial.html
 https://selectstar-ai.medium.com/what-is-mnist-and-why-is-it-important-e9a269edbad5
 https://www.tensorflow.org/datasets/keras_example
+https://keras.io/examples/vision/mnist_convnet/
 
 Build TensorFlow digits classifier : using a stack of Keras Dense Layers
 Build a Classifier
