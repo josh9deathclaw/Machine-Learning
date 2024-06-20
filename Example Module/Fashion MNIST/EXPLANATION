@@ -13,6 +13,8 @@ Steps :
       - 1st column contains labels, other contain pixels for each image
       - Convert pixel values into decimal, converted into 32-bit array (float 32)
       - Convert each flattened row of pixel values into a 4D tensor
+      - Need to partition the data correctly
+            - for the training data, eg. use 80% for training and 20% for validation
   - Create Model
         - Convolution ? Pooling ?
         - How many layers ?
