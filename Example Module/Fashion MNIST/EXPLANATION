@@ -1,0 +1,43 @@
+https://arxiv.org/pdf/1708.07747 
+https://github.com/zalandoresearch/fashion-mnist
+Zalando Article Images
+  - Training Set : 60000
+  - Test Set : 10000
+      - Both Sets have Input Images and Labels
+Different Articles of Clothing
+  - Top, Trouser, Pullover, Dress, Coat, Sandals, Shirt, Sneaker, Bag, Ankle Boots
+  - Each input images is 28*28 pixels and greyscale (0 (black) to 255 (white))
+Steps :
+  - Import Dataset
+      - Data is already balanced
+      - 1st column contains labels, other contain pixels for each image
+      - Convert pixel values into decimal, converted into 32-bit array (float 32)
+      - Convert each flattened row of pixel values into a 4D tensor
+  - Create Model
+        - Convolution ? Pooling ?
+        - How many layers ?
+        - Input Layer : 28,28,1 (28*28 pixels and 1 channel for greyscale)
+        - Convolutional Layers
+              - Can use Conv2D layers to extract features from the images
+                    - Start small and increase with time
+        - Pooling Layers
+              - Max or Average, this is done to downsample the feature maps
+        - Dense Layer ( fully connected layer )
+              - This is classification step
+                    - 10 units as there are 10 classes in Fashion MNIST
+                    - Use SoftMax Activation to get probabilities
+  - Hypterparameter Tuning
+        - This are the parameter values we set at the start 
+              - Number of layers, Filter sizes and number
+              - Activation Function (ReLU, Sigmoid, Tan)
+              - Batch Size (memory constraints, commonly use 32,64)
+              - Learning Rate and Optimizer
+  - Compile and Train the Model
+        - Loss Function 
+        - Metrics to Track : accuracy, precision
+        - Epochs : the amount of tests to do
+              - Graph to figure out if it is over or underfitting
+  - Evaluation
+        - Overfitting : dropout, batch normalisation or data augmentation
+        - Use a validation set
+  - Create loss function
