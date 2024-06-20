@@ -1,0 +1,9 @@
+First Round :
+  - 20 Epochs, Training Accuracy = 99%, Validation Loss = 0.4396 Accuracy = 92%
+        - high validation loss is sign of overfitting
+              - less testing ?
+  - Model evaluation against the Test Set
+  - Implement Dropout
+        - randomly turns off a fraction of neurons during the training process
+              - reduces dependency on the training set by some amount
+                      - can decide how many neurons to turn off in the hyperparameters
