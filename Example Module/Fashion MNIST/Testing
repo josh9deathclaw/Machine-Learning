@@ -7,3 +7,42 @@ First Round :
         - randomly turns off a fraction of neurons during the training process
               - reduces dependency on the training set by some amount
                       - can decide how many neurons to turn off in the hyperparameters
+  - Graph the Accuracy, Precision, Loss and Recall
+  - Save the model so can reuse without having to rerun it
+  - Use predict method in order to try the model on the test data (10000 samples)
+  - Visualise the correct and incorrect predictions, which classes are struggling more than others
+  - Create a Classification Report
+          - From this can see Class 0 and 6 are performing poor
+                - these are T-shirt top and shirts
+                      - very similar how can i help the ai model find the differences
+RESULTS = 
+Test loss: 0.21716204285621643
+Test accuracy: 0.9205999970436096
+Test precision: 0.9307425618171692
+Test recall: 0.9125000238418579
+Test AUC: 0.9955464005470276
+
+Test 2 : 
+Changing Hyperparameters
+  - LeakyReLU is suitable 
+        - could test with ReLU, Sigmoid
+  - Adjust Learning Rate
+        - currently using Adam Optimiser
+                - can either manually adjust the learning rate or can use a Learning Rate Scheduler
+                - Defauly Adam LR = 0.001, could adjust to try 0.01
+  - In Fully Connected Layer, try using sigmoid instead of linear
+        - cannot use sigmoid as we are using a multi-class classification, need to use ReLU
+Test loss: 0.4753974974155426
+Test accuracy: 0.8208000063896179
+Test precision: 0.8764262795448303
+Test recall: 0.7681000232696533
+Test AUC: 0.9853516221046448
+        - Results much worse, use default learning rate of 0.001
+Test 3 : Confusion Matrix
+    - attempted to do image flip and rotation however kept getting errors, will try this for now
+    - import ikertools and sklearn.metrics confusion_matrix
+    
+Test 4 :
+Implement Data Augmentation
+  - Use Rotations, rotate the image and use the filter in order to give the CNN different look at the images
+        
