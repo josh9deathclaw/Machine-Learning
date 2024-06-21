@@ -43,3 +43,11 @@ Steps :
         - Overfitting : dropout, batch normalisation or data augmentation
         - Use a validation set
   - Create loss function
+
+Model Evaluation
+  - Graph : Accuracy, Precision, Loss
+  - Create : Confusion Matrix
+          - Create for each type of Metric
+                  - Than create specific class Confusion Matrix
+                            - Than create a table of all the metrics for each class
+          = Can than create a ROC Curve and plot it
