@@ -1,0 +1,10 @@
+Applying Theory of RNN to create a Language Translation Model (Korean to English)
+  - using seq2seq, decoder / encoders
+  - LTSM
+  - trying to apply : 
+        - attention
+  - look into :
+        - GRU
+        - BERT
+        - Word Embeddings
+  - want to have it so it can translate between multiple different languages
