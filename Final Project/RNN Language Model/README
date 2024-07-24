@@ -1,0 +1,2 @@
+RNN Model : 
+  - implements seq2seq, bidirectional lstm, attention
